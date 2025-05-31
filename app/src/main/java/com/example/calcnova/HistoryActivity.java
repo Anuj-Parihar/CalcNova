@@ -4,9 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -17,7 +15,6 @@ public class HistoryActivity extends AppCompatActivity {
     private TextView historyDisplay;
     private Button clearButton;
     private List<String> history = new ArrayList<>();
-
     private static final String HISTORY_PREF = "calculator_history";
     private static final String HISTORY_ENTRIES_KEY = "history_entries";
     private static final String HISTORY_SIZE_KEY = "history_size";
@@ -58,11 +55,9 @@ public class HistoryActivity extends AppCompatActivity {
                 tempSet.add(entry);
             }
         }
-
         history.clear();
         history.addAll(tempSet);
     }
-
     private void updateHistoryDisplay() {
         if (history.isEmpty()) {
             historyDisplay.setText("No History");
